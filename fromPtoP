@@ -1,9 +1,8 @@
 
 time=0   #inserttime, assuming 0 as default
 
-sed s/[0 2 -2 0 0 0 0]/[1 -1 -2 0 0 0 0]/g system/controlDict > system/controlDict2  
-
-awk '$1*1{$1 *= 1.2047}1' 0/p > 0/temp
+sed s/[0 2 -2 0 0 0 0]/[1 -1 -2 0 0 0 0]/g 0/p > 0/p2
+awk '$1*1{$1 *= 1.2047}1' 0/p2 > 0/temp
 
 awk '$1*1{$1 += 101325}1' 0/temp > 0/p_comp
 
