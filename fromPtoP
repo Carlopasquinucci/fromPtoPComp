@@ -1,6 +1,7 @@
 
 time=0   #inserttime, assuming 0 as default
 
+sed s/[0 2 -2 0 0 0 0]/[1 -1 -2 0 0 0 0]/g system/controlDict > system/controlDict2  
 
 awk '$1*1{$1 *= 1.2047}1' 0/p > 0/temp
 
